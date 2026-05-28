@@ -1,0 +1,14 @@
+# Backups and local scratch files
+*.bak
+index.html.bak
+prompt.txt
+
+# Development / Claude variants
+client_claude.html
+client_claude_v2.html
+
+# Unused/redundant assets & scripts not referenced in the project
+build.js
+
+quizrush.webp
+claimshield_ml.webp

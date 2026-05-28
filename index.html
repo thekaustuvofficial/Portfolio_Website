@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+    <script>
+        (function () {
+            var mode = localStorage.getItem('portfolioMode');
+            if (mode === 'client' || !mode) {
+                window.location.replace('client.html');
+            }
+        })();
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4FM5D2NHR"></script>
     <script>
@@ -13,7 +21,30 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kaustuv Singh - Crafting Experiences that People Feel</title>
+    
+    <!-- Primary Meta -->
+    <title>Kaustuv Singh — Full-Stack Developer & Software Engineer</title>
+    <meta name="description" content="Portfolio of Kaustuv Singh, Computer Science Student & Full-Stack Developer based in Delhi NCR. Specializing in high-performance web systems, custom commerce architectures, and autonomous drone AI."/>
+    <meta name="author" content="Kaustuv Singh"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://kaustuvsingh.vercel.app/"/>
+
+    <!-- Open Graph — controls how your link looks on LinkedIn, WhatsApp, everywhere -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Kaustuv Singh — Full-Stack Developer & Software Engineer"/>
+    <meta property="og:description" content="Explore projects, experience, and capabilities in full-stack engineering, performance optimization, and custom web products by Kaustuv Singh."/>
+    <meta property="og:url" content="https://kaustuvsingh.vercel.app/"/>
+    <meta property="og:image" content="https://kaustuvsingh.vercel.app/og-image.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:site_name" content="Kaustuv Singh"/>
+    <meta property="og:locale" content="en_IN"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Kaustuv Singh — Full-Stack Developer & Software Engineer"/>
+    <meta name="twitter:description" content="Explore projects, experience, and capabilities in full-stack engineering, performance optimization, and custom web products by Kaustuv Singh."/>
+    <meta name="twitter:image" content="https://kaustuvsingh.vercel.app/og-image.jpg"/>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -334,10 +365,9 @@
             width: 0 !important;
         }
 
-        /* HERO */
         .hero {
             min-height: 100vh;
-            padding: 110px 7vw 50px;
+            padding: 125px 7vw 30px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -345,7 +375,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            gap: 20px;
+            gap: 12px;
         }
 
         .featured-showcase {
@@ -368,7 +398,7 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: .2em;
-            margin-bottom: 26px;
+            margin-bottom: 12px;
         }
 
         .dot {
@@ -389,11 +419,11 @@
 
         .hero h1 {
             font-family: 'Instrument Serif', serif;
-            font-size: clamp(60px, 9vw, 130px);
-            line-height: 1.15;
+            font-size: clamp(52px, 7.5vw, 108px);
+            line-height: 0.92;
             font-weight: 400;
-            letter-spacing: -0.02em;
-            margin-bottom: 26px;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
         }
 
         .hero h1 em {
@@ -403,7 +433,7 @@
 
         .hero p {
             font-size: 19px;
-            line-height: 1.8;
+            line-height: 1.5;
             color: var(--muted);
             max-width: 560px;
             margin: auto;
@@ -412,7 +442,7 @@
         .hero-buttons {
             display: flex;
             gap: 18px;
-            margin-top: 28px;
+            margin-top: 16px;
             flex-wrap: wrap;
             justify-content: center;
             opacity: 0;
@@ -429,7 +459,7 @@
         }
 
         .hero-left {
-            max-width: 780px;
+            max-width: 1080px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -986,7 +1016,7 @@
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
             gap: 60px;
-            margin-bottom: 60px;
+            margin-bottom: 24px;
             align-items: center;
         }
 
@@ -1387,6 +1417,7 @@
             overflow: hidden;
             vertical-align: bottom;
             margin-right: 0.12em;
+            padding-bottom: 0.15em;
         }
 
         .word-inner {
@@ -1408,6 +1439,7 @@
 
         .hero h1 .word-inner {
             padding-right: 0.15em;
+            padding-left: 0.08em;
             /* Prevent last character/gradient clipping on skewed or italic glyphs */
         }
 
@@ -1519,7 +1551,7 @@
             letter-spacing: .16em;
             background: linear-gradient(135deg, var(--cyan), var(--blue)) !important;
             color: #04070d !important;
-            border: 1px solid rgba(255, 255, 255, 0.4) !important;
+            border: 1px solid rgba(255, 255, 255, 0.4);
             animation: stickyGlow 3s infinite;
         }
 
@@ -1858,6 +1890,7 @@
             body {
                 overflow-x: hidden;
                 width: 100%;
+                padding-bottom: 72px !important;
             }
 
             html {
@@ -2020,9 +2053,9 @@
             }
 
             .hero h1 {
-                font-size: clamp(62px, 14vw, 92px) !important;
-                letter-spacing: -0.02em !important;
-                line-height: 1.12 !important;
+                font-size: clamp(50px, 11vw, 84px) !important;
+                letter-spacing: -0.03em !important;
+                line-height: 1.05 !important;
             }
 
             .hero p {
@@ -2035,25 +2068,60 @@
             }
 
             .sticky-cta {
-                position: static !important;
-                display: flex;
-                justify-content: center;
-                padding: 40px 5vw 80px !important;
-                width: 100% !important;
+                position: fixed;
+                left: 50% !important;
+                right: auto !important;
+                transform: translateX(-50%) !important;
+                bottom: 16px !important;
+                width: max-content !important;
                 background: transparent;
                 box-sizing: border-box;
             }
 
+            @keyframes pulseGlowMobileDark {
+                0% {
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 12px rgba(37, 99, 235, 0.4);
+                    border-color: rgba(255, 255, 255, 0.15);
+                    transform: translateY(0);
+                }
+
+                50% {
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 35px rgba(37, 99, 235, 0.9);
+                    border-color: rgba(59, 130, 246, 0.5);
+                    transform: translateY(-1.5px);
+                }
+
+                100% {
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 12px rgba(37, 99, 235, 0.4);
+                    border-color: rgba(255, 255, 255, 0.15);
+                    transform: translateY(0);
+                }
+            }
+
             .sticky-cta a {
-                width: 100% !important;
-                max-width: 100% !important;
+                width: auto !important;
+                max-width: max-content !important;
                 justify-content: center;
-                border-radius: 16px !important;
-                padding: 20px !important;
-                font-size: 14px !important;
-                /* No animation on mobile - saves battery + avoids jank */
+                border-radius: 100px !important;
+                padding: 10px 18px !important;
+                font-size: 10px !important;
+                animation: pulseGlowMobileDark 4.5s infinite ease-in-out !important;
+                background: rgba(4, 7, 13, 0.75) !important;
+                color: #ffffff !important;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(8px) !important;
+                -webkit-backdrop-filter: blur(8px) !important;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+                letter-spacing: .05em !important;
+            }
+
+            body.light .sticky-cta a {
+                background: rgba(255, 255, 255, 0.75) !important;
+                color: #0f172a !important;
+                border: 1px solid rgba(15, 23, 42, 0.12) !important;
+                box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08) !important;
                 animation: none !important;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+                transform: none !important;
             }
 
             .theme-toggle {
@@ -2255,9 +2323,9 @@
             }
 
             .hero h1 {
-                font-size: clamp(52px, 15vw, 66px) !important;
-                letter-spacing: -0.02em !important;
-                line-height: 1.1 !important;
+                font-size: clamp(42px, 12vw, 62px) !important;
+                letter-spacing: -0.03em !important;
+                line-height: 1.05 !important;
             }
 
             .hero p {
@@ -2328,17 +2396,17 @@
         </svg>
     </button>
 
-    <nav>
-        <a href="#" class="logo">Kaustuv<span class="logo-last"> Singh</span></a>
+    <nav aria-label="Main navigation">
+        <a href="#" class="logo" aria-label="Kaustuv Singh Home">Kaustuv<span class="logo-last"> Singh</span></a>
         <div class="nav-links">
-            <a href="#work">Work</a>
-            <a href="#about">About</a>
-            <a href="#journey">Journey</a>
-            <a href="#contact" class="nav-btn">Initiate</a>
+            <a href="#work" aria-label="Selected Work">Work</a>
+            <a href="#about" aria-label="About Me">About</a>
+            <a href="#journey" aria-label="Career Journey">Journey</a>
+            <a href="#contact" class="nav-btn" aria-label="Initiate Contact">Initiate</a>
         </div>
     </nav>
 
-    <section class="hero">
+    <section class="hero" aria-label="Introduction">
         <div class="glow-blob" style="top:10%;left:30%;"></div>
         <div class="glow-blob cyan" style="bottom:10%;right:10%;"></div>
 
@@ -2349,23 +2417,24 @@
             </div>
 
             <h1>
-                Products people<br><span class="actually-feel">actually feel.</span>
+                I obsess over details<br>that make things<br><em>feel great</em>
             </h1>
 
             <p>
-                Immersive digital experiences, high-performance web applications, and custom e-commerce solutions
-                engineered with precision, cinematic direction, and obsessive attention to detail.
+                Crafting immersive digital experiences, high-performance web
+                applications, and custom e-commerce solutions engineered with precision, cinematic direction, and
+                obsessive attention to detail.
             </p>
 
             <div class="hero-buttons">
-                <a href="#work" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Initialize Contact</a>
+                <a href="#work" class="btn btn-primary" aria-label="View Selected Projects">View Projects</a>
+                <a href="#contact" class="btn btn-secondary" aria-label="Contact Kaustuv Singh">Initialize Contact</a>
             </div>
         </div>
     </section>
 
     <!-- FEATURED SHOWCASE -->
-    <section class="featured-showcase">
+    <section class="featured-showcase" aria-labelledby="featured-project-title">
         <div class="command-center reveal" id="tilt">
             <div class="cc-top">
                 <div class="ball red"></div>
@@ -2376,7 +2445,7 @@
 
             <div class="cc-body">
                 <div class="hc-meta">Live · Drone Intelligence Platform</div>
-                <div class="hc-project">AirGrid OS</div>
+                <div id="featured-project-title" class="hc-project">AirGrid OS</div>
                 <div class="hc-sub">Predictive air quality intelligence via autonomous drone fleets. Live telemetry
                     fused with MQ135 sensor data.</div>
 
@@ -2403,7 +2472,7 @@
                 </div>
 
                 <div class="hc-actions">
-                    <a href="#work" class="btn btn-primary" style="padding: 12px 24px; font-size: 11px;">View
+                    <a href="#work" class="btn btn-primary" style="padding: 12px 24px; font-size: 11px;" aria-label="View Details for AirGrid OS">View
                         Details</a>
                     <div class="status">
                         <div class="dot"></div>India Innovates 2026
@@ -2452,9 +2521,9 @@
     </div>
 
     <!-- WORK SECTION -->
-    <section id="work">
+    <section id="work" aria-labelledby="work-heading">
         <div class="section-tag reveal">Selected Work</div>
-        <h2 class="section-title reveal">Things I've <em>built</em>.</h2>
+        <h2 id="work-heading" class="section-title reveal">Things I've <em>built</em>.</h2>
         <p class="section-text reveal">
             Not just code. Products with proper design thinking, and real execution behind them. Engineered for
             impact.
@@ -2462,7 +2531,7 @@
 
         <div class="projects">
             <a href="https://www.linkedin.com/posts/kaustuv117_indiainnovates2026-smartcities-airquality-ugcPost-7444058280903032832-LI0W/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFA2w9kBVIegE05HK7r8U7agg2wahzCYmPs"
-                target="_blank" rel="noopener noreferrer" class="project reveal">
+                target="_blank" rel="noopener noreferrer" class="project reveal" aria-label="AirGrid OS project: Drone-integrated AQI monitoring system">
                 <div class="project-visual" style="background-image:url('./airgrid_os.jpg')">
                     <div class="project-overlay">
                         <div class="badge">Drone · IoT · Real-time</div>
@@ -2498,7 +2567,7 @@
             </a>
 
             <a href="https://www.linkedin.com/posts/kaustuv117_two-national-finals-multiple-iit-juries-activity-7424493792566812672-j2dp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFA2w9kBVIegE05HK7r8U7agg2wahzCYmPs"
-                target="_blank" rel="noopener noreferrer" class="project reveal">
+                target="_blank" rel="noopener noreferrer" class="project reveal" aria-label="HealthChain project: Real-time patient flow orchestration and management system">
                 <div class="project-visual" style="background-image:url('./healthchain.jpg')">
                     <div class="project-overlay">
                         <div class="badge">SaaS · OPD Flow · HealthTech</div>
@@ -2534,7 +2603,7 @@
             </a>
 
             <a href="https://www.linkedin.com/posts/kaustuv117_ai-robotics-autonomousvehicles-activity-7384652452370800640-hTUt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFA2w9kBVIegE05HK7r8U7agg2wahzCYmPs"
-                target="_blank" rel="noopener noreferrer" class="project reveal">
+                target="_blank" rel="noopener noreferrer" class="project reveal" aria-label="AI Self-Driving Car project: Master-Slave dual ESP32 self-driving agent">
                 <div class="project-visual" style="background-image:url('./self_driving_car.jpg')">
                     <div class="project-overlay">
                         <div class="badge">Edge AI · Robotics · Embedded</div>
@@ -2570,7 +2639,7 @@
             </a>
 
             <a href="https://www.linkedin.com/posts/kaustuv117_campusxchange-collegemarketplace-startup-activity-7356004302340980737-qijM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFA2w9kBVIegE05HK7r8U7agg2wahzCYmPs"
-                target="_blank" rel="noopener noreferrer" class="project reveal">
+                target="_blank" rel="noopener noreferrer" class="project reveal" aria-label="CampusXchange project: Multi-college WordPress WooCommerce student marketplace">
                 <div class="project-visual" style="background-image:url('./campusxchange.jpg')">
                     <div class="project-overlay">
                         <div class="badge">Marketplace · WooCommerce · WordPress</div>
@@ -2608,9 +2677,12 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <div class="about-wrap" id="about">
+    <section class="about-wrap" id="about" aria-labelledby="about-heading">
         <div class="about-header reveal">
-            <div class="about-big">I obsess over the details that make things <em>feel great.</em></div>
+            <div>
+                <div class="section-tag" style="margin-bottom: 24px;">About Me</div>
+                <h2 class="about-big" id="about-heading">Crafting products people<br><em>actually feel.</em></h2>
+            </div>
             <div class="about-visual"></div>
         </div>
 
@@ -2641,13 +2713,13 @@
                         Retainers</span></div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- SKILLS SECTION -->
-    <div class="skills-wrap">
+    <section class="skills-wrap" aria-labelledby="skills-heading">
         <div class="reveal" style="margin-bottom:40px">
             <div class="section-tag">Capabilities</div>
-            <h2 class="section-title" style="font-size:clamp(36px,5vw,54px);">What I bring <em>to the table</em>.</h2>
+            <h2 id="skills-heading" class="section-title" style="font-size:clamp(36px,5vw,54px);">What I bring <em>to the table</em>.</h2>
         </div>
 
         <div class="skills-row reveal">
@@ -2693,13 +2765,13 @@
                     Integrations</span><span class="sk-pill">Technical Audits</span>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- JOURNEY / TIMELINE -->
-    <div class="tl-wrap" id="journey">
+    <section class="tl-wrap" id="journey" aria-labelledby="experience-heading">
         <div class="reveal" style="margin-bottom:50px">
             <div class="section-tag">Experience</div>
-            <h2 class="section-title">The <em>journey</em> so far.</h2>
+            <h2 id="experience-heading" class="section-title">The <em>journey</em> so far.</h2>
         </div>
 
         <div class="tl-item reveal">
@@ -2802,21 +2874,21 @@
                 <span class="tl-tag">Leadership</span>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- CONTACT / CTA -->
-    <div class="contact reveal" id="contact">
+    <section class="contact reveal" id="contact" aria-labelledby="contact-heading">
         <div
             style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--cyan); margin-bottom: 24px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; justify-content: center; width: 100%;">
             <span
                 style="width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 10px var(--cyan);"></span>
             Available for Client Projects & Consulting
         </div>
-        <h2>Let's build<br><em>something real.</em></h2>
+        <h2 id="contact-heading">Let's build<br><em>something real.</em></h2>
         <p>One conversation. No fluff. Just ambitious execution. If you're building something that requires precision
             and vision, let's talk.</p>
         <div class="contact-links">
-            <a href="mailto:kaustuv360@gmail.com" class="btn btn-primary">
+            <a href="mailto:kaustuv360@gmail.com" class="btn btn-primary" aria-label="Send email to Kaustuv Singh">
                 <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2"
                     fill="none" stroke-linecap="round" stroke-linejoin="round"
                     style="margin-right: 10px; vertical-align: middle;">
@@ -2826,7 +2898,7 @@
                 Initialize Email
             </a>
             <a href="https://linkedin.com/in/kaustuv117" target="_blank" rel="noopener noreferrer"
-                class="btn btn-secondary btn-linkedin">
+                class="btn btn-secondary btn-linkedin" aria-label="Visit Kaustuv Singh's LinkedIn profile">
                 <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"
                     style="margin-right: 10px; vertical-align: middle;">
                     <path
@@ -2835,7 +2907,7 @@
                 LinkedIn
             </a>
             <a href="https://github.com/thekaustuvofficial" target="_blank" rel="noopener noreferrer"
-                class="btn btn-secondary btn-github">
+                class="btn btn-secondary btn-github" aria-label="Visit Kaustuv Singh's GitHub profile">
                 <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"
                     style="margin-right: 10px; vertical-align: middle;">
                     <path
@@ -2844,7 +2916,7 @@
                 GitHub
             </a>
         </div>
-    </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
@@ -2887,7 +2959,7 @@
 
     <!-- STICKY CTA -->
     <div class="sticky-cta">
-        <a href="#contact">Start a Build</a>
+        <a href="#" id="modeSwitcherBtn">See Pricing? Switch view →</a>
     </div>
 
     <script>
@@ -2973,7 +3045,7 @@
         if (heroTitle) {
             const text = heroTitle.innerHTML;
             let wordIndex = 0;
-            const newHTML = text.replace(/(<br\/?>|<span[^>]*>[\s\S]*?<\/span>|[\w'’\.-]+)/g, (match) => {
+            const newHTML = text.replace(/(<br\/?>|<span[^>]*>[\s\S]*?<\/span>|<em[^>]*>[\s\S]*?<\/em>|[\w''\.-]+)/g, (match) => {
                 if (match.startsWith('<br')) return match;
                 if (match.startsWith('<span')) {
                     const tempDiv = document.createElement('div');
@@ -2981,14 +3053,25 @@
                     const span = tempDiv.firstChild;
                     const spanText = span.innerHTML;
                     const splitSpanText = spanText.split(' ').map(w => {
-                        const delay = 0.3 + (wordIndex++) * 0.15; // delayed hero text reveals
+                        const delay = 0.3 + (wordIndex++) * 0.15;
                         return `<span class="word-wrapper"><span class="word-inner actually-feel" style="animation-delay: ${delay}s">${w}</span></span>`;
                     }).join(' ');
                     span.innerHTML = splitSpanText;
                     span.className = "";
                     return span.outerHTML;
                 }
-                const delay = 0.3 + (wordIndex++) * 0.15; // delayed hero text reveals
+                if (match.startsWith('<em')) {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = match;
+                    const em = tempDiv.firstChild;
+                    const emText = em.textContent;
+                    const splitEmText = emText.split(' ').filter(w => w).map(w => {
+                        const delay = 0.3 + (wordIndex++) * 0.15;
+                        return `<span class="word-wrapper"><span class="word-inner" style="animation-delay: ${delay}s">${w}</span></span>`;
+                    }).join(' ');
+                    return `<em>${splitEmText}</em>`;
+                }
+                const delay = 0.3 + (wordIndex++) * 0.15;
                 return `<span class="word-wrapper"><span class="word-inner" style="animation-delay: ${delay}s">${match}</span></span>`;
             });
             heroTitle.innerHTML = newHTML;
@@ -3050,7 +3133,7 @@
             backgroundParallax();
 
             // 5. Magnetic Physics for interactive elements
-            const magneticElements = document.querySelectorAll('.btn, .logo, #themeToggle');
+            const magneticElements = document.querySelectorAll('.logo, #themeToggle');
             magneticElements.forEach(el => {
                 el.style.willChange = 'transform';
                 let rect = null;
@@ -3115,6 +3198,77 @@
                 }
             }
         }, { passive: true });
+
+        /* ─── MODE SWITCHER ─────────────────────────────────────── */
+        document.getElementById('modeSwitcherBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.setItem('portfolioMode', 'client');
+            window.location.replace('client.html');
+        });
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://kaustuvsingh.vercel.app/#person",
+          "name": "Kaustuv Singh",
+          "url": "https://kaustuvsingh.vercel.app/",
+          "sameAs": [
+            "https://github.com/thekaustuvofficial",
+            "https://linkedin.com/in/kaustuv117"
+          ],
+          "jobTitle": "Full-Stack Developer & Software Engineer",
+          "knowsAbout": [
+            "Full-Stack Development",
+            "Shopify Development",
+            "WordPress Development",
+            "WooCommerce",
+            "Autonomous Drone Systems",
+            "Embedded Systems",
+            "IoT",
+            "React",
+            "Java",
+            "Python"
+          ],
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "KIET Group of Institutions"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://kaustuvsingh.vercel.app/#website",
+          "url": "https://kaustuvsingh.vercel.app/",
+          "name": "Kaustuv Singh — Portfolio",
+          "publisher": {
+            "@id": "https://kaustuvsingh.vercel.app/#person"
+          }
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://kaustuvsingh.vercel.app/#profile",
+          "url": "https://kaustuvsingh.vercel.app/",
+          "mainEntity": {
+            "@id": "https://kaustuvsingh.vercel.app/#person"
+          }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://kaustuvsingh.vercel.app/#service",
+          "name": "Kaustuv Singh Freelance Development Services",
+          "url": "https://kaustuvsingh.vercel.app/",
+          "image": "https://kaustuvsingh.vercel.app/og-image.jpg",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Delhi NCR",
+            "addressCountry": "IN"
+          }
+        }
+      ]
+    }
     </script>
 </body>
 
