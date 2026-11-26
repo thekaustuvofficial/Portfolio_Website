@@ -2,14 +2,6 @@
 <html lang="en">
 
 <head>
-    <script>
-        (function () {
-            var mode = localStorage.getItem('portfolioMode');
-            if (mode === 'client' || !mode) {
-                window.location.replace('client.html');
-            }
-        })();
-    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4FM5D2NHR"></script>
     <script>
@@ -23,28 +15,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta -->
-    <title>Kaustuv Singh</title>
-    <meta name="description" content="Crafting immersive digital experiences, high-performance web applications, and custom e-commerce solutions engineered with precision, cinematic direction, and obsessive attention to detail."/>
+    <title>Kaustuv Singh | Creative Thinker &amp; Builder</title>
+    <meta name="description" content="Kaustuv Singh is a creative thinker and problem solver who builds and ships useful products with care, across software, commerce, cloud, and autonomous systems."/>
     <meta name="author" content="Kaustuv Singh"/>
     <meta name="robots" content="index, follow"/>
     <link rel="canonical" href="https://kaustuvsingh.vercel.app/"/>
 
     <!-- Open Graph — controls how your link looks on LinkedIn, WhatsApp, everywhere -->
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Kaustuv Singh"/>
-    <meta property="og:description" content="Crafting immersive digital experiences, high-performance web applications, and custom e-commerce solutions engineered with precision, cinematic direction, and obsessive attention to detail."/>
+    <meta property="og:title" content="Kaustuv Singh | Creative Thinker &amp; Builder"/>
+    <meta property="og:description" content="Kaustuv Singh is a creative thinker and problem solver who builds and ships useful products with care, across software, commerce, cloud, and autonomous systems."/>
     <meta property="og:url" content="https://kaustuvsingh.vercel.app/"/>
     <meta property="og:image" content="https://kaustuvsingh.vercel.app/og-image.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
+    <meta property="og:image:alt" content="Kaustuv Singh — Creative Thinker, Problem Solver, Builder"/>
     <meta property="og:site_name" content="Kaustuv Singh"/>
     <meta property="og:locale" content="en_IN"/>
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="Kaustuv Singh"/>
-    <meta name="twitter:description" content="Crafting immersive digital experiences, high-performance web applications, and custom e-commerce solutions engineered with precision, cinematic direction, and obsessive attention to detail."/>
+    <meta name="twitter:title" content="Kaustuv Singh | Creative Thinker &amp; Builder"/>
+    <meta name="twitter:description" content="Kaustuv Singh is a creative thinker and problem solver who builds and ships useful products with care, across software, commerce, cloud, and autonomous systems."/>
     <meta name="twitter:image" content="https://kaustuvsingh.vercel.app/og-image.jpg"/>
+    <meta name="twitter:image:alt" content="Kaustuv Singh — Creative Thinker, Problem Solver, Builder"/>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,6 +92,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 72px;
             overflow-x: hidden;
         }
 
@@ -220,7 +216,7 @@
         }
 
         body.light .project-overlay {
-            background: linear-gradient(rgba(255, 255, 255, .02), rgba(255, 255, 255, .78));
+            background: linear-gradient(180deg, rgba(3, 7, 14, .04) 20%, rgba(3, 7, 14, .18) 58%, rgba(3, 7, 14, .52) 100%);
         }
 
         body.light .telemetry,
@@ -278,7 +274,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 22px 60px;
+            padding: 10px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -293,11 +289,47 @@
 
         .logo {
             font-family: 'Instrument Serif', serif;
-            font-size: 30px;
+            font-size: 27px;
             font-style: italic;
             color: var(--text);
             text-decoration: none;
             transition: letter-spacing 0.4s cubic-bezier(.16, 1, .3, 1), opacity 0.4s;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 1px;
+            flex-shrink: 0;
+        }
+
+        .nav-availability {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            color: var(--muted);
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: .12em;
+            line-height: 1.2;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .nav-availability-dot {
+            width: 6px;
+            height: 6px;
+            flex: 0 0 6px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 9px color-mix(in srgb, var(--green) 65%, transparent);
+            animation: availabilityPulse 2.2s ease-in-out infinite;
+        }
+
+        @keyframes availabilityPulse {
+            0%, 100% { opacity: .65; transform: scale(.88); }
+            50% { opacity: 1; transform: scale(1.12); }
         }
 
         @media (hover: hover) {
@@ -348,7 +380,7 @@
         }
 
         .nav-btn {
-            padding: 14px 24px;
+            padding: 9px 18px;
             border-radius: 999px;
             font-weight: 700;
             font-size: 12px;
@@ -596,42 +628,6 @@
             transform: translateZ(0);
         }
 
-        .cc-top {
-            padding: 16px 22px;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        .ball {
-            width: 11px;
-            height: 11px;
-            border-radius: 50%;
-        }
-
-        .red {
-            background: #ff5f57;
-        }
-
-        .yellow {
-            background: #ffbd2e;
-        }
-
-        .green {
-            background: #28c840;
-        }
-
-        .cc-url {
-            flex: 1;
-            text-align: center;
-            font-size: 11px;
-            color: var(--muted);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
         .cc-body {
             padding: 40px;
             position: relative;
@@ -807,6 +803,287 @@
             color: var(--muted);
         }
 
+        .achievements-wrap {
+            min-height: min(760px, 100svh);
+            display: flex;
+            align-items: center;
+            padding-top: clamp(28px, 5vh, 56px);
+            padding-bottom: clamp(28px, 5vh, 56px);
+        }
+
+        .achievements-inner {
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+        }
+
+        .achievements-heading {
+            margin-bottom: clamp(14px, 2.4vh, 24px);
+            text-align: left;
+        }
+
+        .achievements-heading .section-title {
+            margin-bottom: 0;
+        }
+
+        .achievement-carousel {
+            width: min(100%, 1120px);
+            margin: 0 auto;
+        }
+
+        .achievement-stage {
+            position: relative;
+            height: clamp(280px, min(42vw, 47vh), 460px);
+            isolation: isolate;
+        }
+
+        .achievement-slide {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            width: 50%;
+            height: 92%;
+            max-width: none;
+            visibility: hidden;
+            opacity: 0;
+            overflow: visible;
+            border: 0;
+            border-radius: 10px;
+            background: transparent;
+            box-shadow: none;
+            transform: translate3d(-50%, 10%, 0) scale(.9);
+            transition: opacity .75s cubic-bezier(.22, 1, .36, 1), transform .75s cubic-bezier(.22, 1, .36, 1), filter .75s cubic-bezier(.22, 1, .36, 1), visibility .75s;
+            will-change: transform, opacity;
+        }
+
+        .achievement-slide.is-active {
+            top: 0;
+            left: 50%;
+            width: 64%;
+            height: 100%;
+            z-index: 3;
+            visibility: visible;
+            opacity: 1;
+            filter: brightness(1);
+            transform: translate3d(-50%, 0, 0) scale(1);
+        }
+
+        .achievement-slide.is-prev,
+        .achievement-slide.is-next {
+            top: 10%;
+            height: 90%;
+            z-index: 2;
+            visibility: visible;
+            opacity: .72;
+            filter: brightness(.58) saturate(.78);
+            transform: translate3d(0, 0, 0) scale(.86);
+        }
+
+        .achievement-slide.is-prev {
+            left: 0;
+            transform-origin: left center;
+        }
+
+        .achievement-slide.is-next {
+            left: auto;
+            right: 0;
+            transform-origin: right center;
+        }
+
+        .achievement-image {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+        }
+
+        .achievement-image img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 18px 48px rgba(0, 0, 0, .2);
+        }
+
+        .achievement-caption {
+            min-height: 30px;
+            margin: 10px auto 0;
+            color: var(--text);
+            font-size: clamp(14px, 1.6vw, 18px);
+            font-weight: 500;
+            letter-spacing: -.01em;
+            line-height: 1.5;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: opacity .3s ease, transform .3s ease;
+        }
+
+        .achievement-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 2px 4px 0;
+        }
+
+        .achievement-pagination,
+        .achievement-arrows {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .achievement-pagination button,
+        .achievement-arrows button {
+            border: 0;
+            color: var(--muted);
+            cursor: pointer;
+        }
+
+        .achievement-pagination button {
+            display: grid;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            place-items: center;
+            border-radius: 50%;
+            background: transparent;
+            opacity: 1;
+        }
+
+        .achievement-pagination button::before {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--muted);
+            opacity: .45;
+            content: "";
+            transition: width .25s ease, opacity .25s ease, background .25s ease;
+        }
+
+        .achievement-pagination button[aria-current="true"]::before {
+            width: 20px;
+            background: var(--blue);
+            opacity: 1;
+        }
+
+        .achievement-count {
+            min-width: 58px;
+            color: var(--muted);
+            font-size: 11px;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: .12em;
+        }
+
+        .achievement-arrows button {
+            display: grid;
+            width: 44px;
+            height: 44px;
+            place-items: center;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            background: var(--surface);
+            color: var(--text);
+            transition: border-color .2s ease, transform .2s ease, background .2s ease;
+        }
+
+        .achievement-arrows button:hover {
+            border-color: var(--blue);
+            background: var(--surface2);
+            transform: translateY(-2px);
+        }
+
+        .achievement-pagination button:focus-visible,
+        .achievement-arrows button:focus-visible {
+            outline: 2px solid var(--cyan);
+            outline-offset: 4px;
+        }
+
+        @media (min-width: 1101px) {
+            .achievements-wrap {
+                min-height: min(820px, 100svh);
+                padding-top: clamp(40px, 7vh, 76px);
+                padding-bottom: clamp(40px, 7vh, 76px);
+            }
+
+            .achievements-heading {
+                margin-bottom: clamp(24px, 4vh, 40px);
+                text-align: center;
+            }
+
+            .achievements-heading .section-tag {
+                justify-content: center;
+            }
+
+            .achievement-carousel {
+                width: min(100%, 1320px);
+            }
+
+            .achievement-stage {
+                height: clamp(390px, min(48vw, 54vh), 540px);
+            }
+
+            .achievement-slide {
+                width: 48%;
+                height: 90%;
+                top: 10%;
+            }
+
+            .achievement-slide.is-active {
+                width: 74%;
+                height: 100%;
+                top: 0;
+            }
+
+            .achievement-slide.is-prev,
+            .achievement-slide.is-next {
+                top: 11%;
+                height: 89%;
+                opacity: .64;
+                filter: brightness(.62) saturate(.76);
+                transform: translate3d(0, 0, 0) scale(.88);
+            }
+
+            .achievement-slide.is-prev { left: 2%; }
+            .achievement-slide.is-next { right: 2%; }
+
+            .achievement-image img {
+                border-radius: 10px;
+                box-shadow: 0 24px 64px rgba(0, 0, 0, .24);
+            }
+
+            .achievement-caption {
+                margin-top: 16px;
+                font-size: 18px;
+            }
+
+            .achievement-controls {
+                justify-content: center;
+                gap: 26px;
+                padding-top: 12px;
+            }
+
+            .achievement-arrows { gap: 10px; }
+        }
+
+        @media (max-width: 1100px) {
+            .achievements-wrap { min-height: min(680px, 100svh); }
+            .achievement-stage { height: clamp(250px, min(59vw, 40vh), 380px); }
+            .achievement-slide { width: 54%; height: 90%; top: 10%; }
+            .achievement-slide.is-active { width: 70%; height: 100%; top: 0; }
+            .achievement-slide.is-prev,
+            .achievement-slide.is-next { top: 10%; height: 90%; width: 54%; }
+            .achievement-caption { min-height: 38px; padding: 0 8px; font-size: 14px; }
+            .achievement-controls { padding-top: 0; }
+        }
+
         /* SECTIONS */
         section {
             padding: 80px 7vw;
@@ -920,6 +1197,52 @@
             background-color: #111;
         }
 
+        .project-carousel {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        .project-carousel img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transform: scale(1.025);
+            transition: opacity 850ms ease, transform 5s ease;
+        }
+
+        .project-carousel img.is-active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .project-carousel-dots {
+            position: absolute;
+            right: 26px;
+            top: 26px;
+            z-index: 2;
+            display: flex;
+            gap: 7px;
+        }
+
+        .project-carousel-dots span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .5);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, .45);
+        }
+
+        .project-carousel-dots span.is-active {
+            width: 20px;
+            border-radius: 999px;
+            background: #fff;
+        }
+
         .project-overlay {
             position: absolute;
             inset: 0;
@@ -934,11 +1257,15 @@
             padding: 10px 16px;
             border-radius: 999px;
             width: max-content;
-            background: rgba(0, 0, 0, .4);
-            border: 1px solid rgba(255, 255, 255, .12);
+            background: rgba(5, 10, 18, .82);
+            border: 1px solid rgba(255, 255, 255, .24);
             font-size: 11px;
             letter-spacing: .18em;
             text-transform: uppercase;
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .48), 0 2px 6px rgba(0, 0, 0, .28), inset 0 1px 0 rgba(255, 255, 255, .12);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
         }
 
         .project-stats {
@@ -950,53 +1277,82 @@
         .project-stats span {
             padding: 10px 14px;
             border-radius: 16px;
-            background: rgba(0, 0, 0, .45);
-            border: 1px solid rgba(255, 255, 255, .08);
+            background: rgba(5, 10, 18, .84);
+            border: 1px solid rgba(255, 255, 255, .22);
             font-size: 11px;
             letter-spacing: .12em;
             text-transform: uppercase;
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .48), 0 2px 6px rgba(0, 0, 0, .28), inset 0 1px 0 rgba(255, 255, 255, .1);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .project-meta {
+            margin-top: 12px;
+            color: var(--cyan) !important;
+            font-size: 13px !important;
+            line-height: 1.6 !important;
         }
 
         .project-content h3 {
             font-family: 'Instrument Serif', serif;
-            font-size: 56px;
+            font-size: 52px;
             font-weight: 400;
             letter-spacing: -.04em;
-            margin-bottom: 18px;
+            margin-bottom: 8px;
             line-height: 1.02;
         }
 
-        .project-content p {
-            font-size: 17px;
-            line-height: 1.9;
-            color: var(--muted);
-            margin-bottom: 34px;
-        }
-
-        .architecture {
+        .project-context {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: max-content;
+            flex-wrap: wrap;
             align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: var(--muted);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: .14em;
+            text-transform: uppercase;
         }
 
-        .node {
-            padding: 16px 18px;
-            border-radius: 18px;
-            background: rgba(255, 255, 255, .04);
-            border: 1px solid rgba(255, 255, 255, .08);
-            font-size: 13px;
-            letter-spacing: 0.02em;
-            text-align: center;
+        .project-context span + span::before {
+            content: '·';
+            margin-right: 10px;
+            color: var(--blue);
         }
 
-        .arrow {
-            text-align: left;
-            padding-left: 24px;
-            color: var(--cyan);
-            font-size: 24px;
-            margin: -5px 0;
+        .project-context .project-dates {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .project-context .project-dates::before {
+            content: none;
+        }
+
+        .project-date-line {
+            width: 34px;
+            height: 1px;
+            background: linear-gradient(90deg, var(--blue), var(--border));
+        }
+
+        .project-content p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .project-stack {
+            border-top: 1px solid var(--border);
+            padding-top: 13px;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.6;
+            letter-spacing: .03em;
         }
 
         .footer-grid {
@@ -1044,6 +1400,15 @@
             margin-top: 18px;
         }
 
+        .about-openness {
+            display: inline-block;
+            margin-bottom: 4px;
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .16em;
+        }
+
         .about-grid {
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
@@ -1060,7 +1425,7 @@
             position: relative;
             background-size: cover;
             background-position: center;
-            background-image: url('./profile.jpg');
+            background-image: url('./profile.webp');
             border: 1px solid rgba(255, 255, 255, 0.05);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 50px rgba(125, 249, 255, 0.03);
             background-color: #111;
@@ -1226,6 +1591,35 @@
             padding: 0 7vw 80px;
         }
 
+        .journey-category {
+            margin-top: 42px;
+        }
+
+        .journey-category-heading {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin: 0 0 12px 28px;
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+        }
+
+        .journey-category-heading::after {
+            content: "";
+            width: min(180px, 24vw);
+            height: 1px;
+            background: linear-gradient(90deg, var(--border), transparent);
+        }
+
+        .journey-category .tl-item:first-of-type {
+            border-top: 1px solid var(--border);
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
         .tl-item {
             display: grid;
             grid-template-columns: 180px 1fr;
@@ -1311,6 +1705,52 @@
             border: 1px solid var(--border);
             position: relative;
             overflow: hidden;
+        }
+
+        .testimonials-wrap {
+            padding: 24px 7vw 80px;
+        }
+
+        .testimonials-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: clamp(28px, 5vw, 56px);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: clamp(32px, 7vw, 96px);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            background: linear-gradient(125deg, var(--surface2), rgba(255, 255, 255, .015) 72%);
+        }
+
+        .testimonials-inner .section-title {
+            margin-bottom: 0;
+            font-size: clamp(42px, 6vw, 68px);
+        }
+
+        .testimonial-note {
+            padding: 6px 0 6px 24px;
+            border-left: 1px solid var(--blue);
+        }
+
+        .testimonial-note-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 14px;
+            color: var(--blue);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .17em;
+            text-transform: uppercase;
+        }
+
+        .testimonial-note p {
+            max-width: 520px;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.75;
         }
 
         .contact::before {
@@ -1887,6 +2327,11 @@
            TABLET / MOBILE LAYOUT
         ============================================ */
         @media (max-width: 1100px) {
+            .testimonials-wrap { padding: 12px 5vw 56px; }
+            .testimonials-inner { grid-template-columns: 1fr; gap: 24px; }
+
+            .journey-category-heading { margin-left: 18px; }
+
             body {
                 overflow-x: hidden;
                 width: 100%;
@@ -1903,6 +2348,15 @@
             .skills-row,
             .tl-item {
                 grid-template-columns: 1fr;
+            }
+
+            /* On compact screens, keep every project image above its copy. */
+            .project .project-visual {
+                order: 0 !important;
+            }
+
+            .project .project-content {
+                order: 1 !important;
             }
 
             .stats-grid {
@@ -1944,24 +2398,12 @@
             }
 
             nav {
-                padding: 14px 40px !important;
+                padding: 8px 40px !important;
             }
 
             .contact {
                 margin: 0 5vw 60px;
                 padding: 50px 30px;
-            }
-
-            .architecture {
-                margin: 24px auto 0 !important;
-                width: 100% !important;
-                max-width: 100% !important;
-            }
-
-            .node {
-                width: 100% !important;
-                white-space: normal !important;
-                box-sizing: border-box !important;
             }
 
             .about-right {
@@ -2011,13 +2453,15 @@
                 align-items: center !important;
             }
 
+            .nav-brand { gap: 1px; }
+
             .nav-links a {
                 font-size: 11px !important;
                 letter-spacing: 0.1em !important;
             }
 
             .nav-btn {
-                padding: 10px 16px !important;
+                padding: 7px 14px !important;
                 font-size: 11px !important;
                 letter-spacing: 0.08em !important;
             }
@@ -2247,11 +2691,11 @@
         ============================================ */
         @media (max-width: 480px) {
             nav {
-                padding: 12px 16px !important;
+                padding: 7px 16px !important;
             }
 
             .logo {
-                font-size: 19px !important;
+                font-size: 18px !important;
             }
 
             .logo-last {
@@ -2268,7 +2712,7 @@
             }
 
             .nav-btn {
-                padding: 8px 12px !important;
+                padding: 6px 10px !important;
                 font-size: 9.5px !important;
                 letter-spacing: 0.04em !important;
             }
@@ -2284,6 +2728,19 @@
                 padding: 20px 16px !important;
                 border-radius: 20px !important;
             }
+
+            .achievements-wrap { min-height: min(620px, 100svh); padding: 24px 16px !important; }
+            .achievements-heading { margin-bottom: 14px; }
+            .achievements-heading .section-tag { margin-bottom: 10px; }
+            .achievements-heading .section-title { font-size: clamp(38px, 10vw, 54px); }
+            .achievement-stage { height: clamp(220px, min(72vw, 36vh), 300px); }
+            .achievement-slide { width: 62%; height: 90%; top: 10%; }
+            .achievement-slide.is-active { width: 80%; height: 100%; top: 0; }
+            .achievement-slide.is-prev,
+            .achievement-slide.is-next { top: 10%; height: 90%; width: 62%; }
+            .achievement-caption { min-height: 36px; margin-top: 7px; font-size: 12px; }
+            .achievement-controls { padding-top: 0; }
+            .achievement-arrows button { width: 44px; height: 44px; }
 
             .project-content h3 {
                 font-size: 32px !important;
@@ -2362,6 +2819,32 @@
             opacity: 0;
             pointer-events: none;
         }
+
+        .nav-links a:focus-visible, .btn:focus-visible, .logo:focus-visible,
+        .theme-toggle:focus-visible, .sticky-cta a:focus-visible {
+            outline: 3px solid var(--cyan);
+            outline-offset: 4px;
+        }
+
+        @media (max-width: 600px) {
+            nav { padding-inline: 16px !important; }
+            .nav-brand { gap: 1px; }
+            .nav-availability { gap: 5px; font-size: 7px; letter-spacing: .06em; }
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 10px !important; }
+            .nav-links a[aria-label="Career Journey"] { display: none; }
+            .hero-buttons { gap: 10px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto !important; }
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 
@@ -2397,15 +2880,23 @@
     </button>
 
     <nav aria-label="Main navigation">
-        <a href="#" class="logo" aria-label="Kaustuv Singh Home">Kaustuv<span class="logo-last"> Singh</span></a>
+        <div class="nav-brand">
+            <a href="#" class="logo" aria-label="Kaustuv Singh Home">Kaustuv<span class="logo-last"> Singh</span></a>
+            <span class="nav-availability">
+                <span class="nav-availability-dot" aria-hidden="true"></span>
+                <span class="nav-availability-full">Open to opportunities &middot; 2027</span>
+            </span>
+        </div>
         <div class="nav-links">
             <a href="#work" aria-label="Selected Work">Work</a>
+            <a href="Kaustuv_Singh_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
             <a href="#about" aria-label="About Me">About</a>
             <a href="#journey" aria-label="Career Journey">Journey</a>
-            <a href="#contact" class="nav-btn" aria-label="Initiate Contact">Initiate</a>
+            <a href="#contact" class="nav-btn" aria-label="Contact Kaustuv Singh">Contact</a>
         </div>
     </nav>
 
+    <main id="main-content">
     <section class="hero" aria-label="Introduction">
         <div class="glow-blob" style="top:10%;left:30%;"></div>
         <div class="glow-blob cyan" style="bottom:10%;right:10%;"></div>
@@ -2413,69 +2904,42 @@
         <div class="hero-left reveal">
             <div class="eyebrow">
                 <div class="dot"></div>
-                Engineer • Builder • Storyteller
+                Engineer &bull; Builder &bull; Storyteller
             </div>
 
             <h1>
-                I obsess over details<br>that make things<br><em>feel great</em>
+                I build useful things<br>with care for<br><em>every detail.</em>
             </h1>
 
-            <p>
-                Crafting immersive digital experiences, high-performance web
-                applications, and custom e-commerce solutions engineered with precision, cinematic direction, and
-                obsessive attention to detail.
+            <p>I&rsquo;m a creative thinker and problem solver who builds and ships useful things with care. My work spans software, commerce, cloud, and autonomous systems&mdash;from a rough idea to a thoughtful, working product.
             </p>
 
             <div class="hero-buttons">
                 <a href="#work" class="btn btn-primary" aria-label="View Selected Projects">View Projects</a>
-                <a href="#contact" class="btn btn-secondary" aria-label="Contact Kaustuv Singh">Initialize Contact</a>
+                <a href="#contact" class="btn btn-secondary" aria-label="Contact Kaustuv Singh">Get in touch</a>
+                <a href="Kaustuv_Singh_resume.pdf" class="btn btn-secondary resume-link" target="_blank" rel="noopener noreferrer">View resume</a>
             </div>
         </div>
     </section>
 
-    <!-- FEATURED SHOWCASE -->
-    <section class="featured-showcase" aria-labelledby="featured-project-title">
-        <div class="command-center reveal" id="tilt">
-            <div class="cc-top">
-                <div class="ball red"></div>
-                <div class="ball yellow"></div>
-                <div class="ball green"></div>
-                <div class="cc-url">kaustuv.dev · Featured Execution</div>
+    <!-- ACHIEVEMENTS SHOWCASE -->
+    <section class="achievements-wrap" aria-labelledby="achievements-heading">
+        <div class="achievements-inner">
+            <div class="achievements-heading">
+                <div>
+                    <div class="section-tag">Selected proof</div>
+                    <h2 id="achievements-heading" class="section-title">Achievements, <em>at a glance.</em></h2>
+                </div>
             </div>
-
-            <div class="cc-body">
-                <div class="hc-meta">Live · Drone Intelligence Platform</div>
-                <div id="featured-project-title" class="hc-project">AirGrid OS</div>
-                <div class="hc-sub">Predictive air quality intelligence via autonomous drone fleets. Live telemetry
-                    fused with MQ135 sensor data.</div>
-
-                <div class="hc-row">
-                    <div class="hc-metric">
-                        <div class="hc-metric-val" data-counter="Top 12">Top 0</div>
-                        <div class="hc-metric-lab">National Rank</div>
-                    </div>
-                    <div class="hc-metric">
-                        <div class="hc-metric-val" data-counter="1500+">0+</div>
-                        <div class="hc-metric-lab">Teams</div>
-                    </div>
-                    <div class="hc-metric">
-                        <div class="hc-metric-val">Live</div>
-                        <div class="hc-metric-lab">AQI Map</div>
-                    </div>
-                </div>
-
-                <div class="hc-chips">
-                    <span class="hc-chip">Pixhawk</span>
-                    <span class="hc-chip">ArduCopter</span>
-                    <span class="hc-chip">React</span>
-                    <span class="hc-chip">Mission Planner</span>
-                </div>
-
-                <div class="hc-actions">
-                    <a href="#work" class="btn btn-primary" style="padding: 12px 24px; font-size: 11px;" aria-label="View Details for AirGrid OS">View
-                        Details</a>
-                    <div class="status">
-                        <div class="dot"></div>India Innovates 2026
+            <div class="achievement-carousel" data-achievement-carousel role="region" aria-label="Project achievements carousel">
+                <div class="achievement-stage"></div>
+                <p class="achievement-caption" aria-live="polite"></p>
+                <div class="achievement-controls">
+                    <div class="achievement-pagination" aria-label="Choose an achievement"></div>
+                    <div class="achievement-arrows">
+                        <span class="achievement-count" aria-live="polite">01 / 05</span>
+                        <button type="button" data-achievement-prev aria-label="Previous achievement"><svg viewBox="0 0 24 24" width="17" height="17" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></svg></button>
+                        <button type="button" data-achievement-next aria-label="Next achievement"><svg viewBox="0 0 24 24" width="17" height="17" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
                     </div>
                 </div>
             </div>
@@ -2485,39 +2949,41 @@
     <!-- TRUST STRIP -->
     <div class="trust-strip reveal">
         <div class="marquee">
-            <span>TOP 12 NATIONALLY</span>
+            <span>TOP 4 NATIONALLY</span>
             <span>1500+ TEAMS</span>
             <span>MICROSOFT INDIA</span>
-            <span>2× NATIONAL WINNER</span>
+            <span>350+ WEEKLY MARKETPLACE VISITS</span>
             <span>UNREAL ENGINE 5</span>
             <span>REAL-TIME TELEMETRY</span>
             <span>SOLO BUILDS</span>
             <span>AUTONOMOUS SYSTEMS</span>
-            <span>TOP 12 NATIONALLY</span>
+            <span>TOP 4 NATIONALLY</span>
             <span>1500+ TEAMS</span>
             <span>MICROSOFT INDIA</span>
-            <span>2× NATIONAL WINNER</span>
+            <span>REAL-TIME SYSTEMS</span>
         </div>
     </div>
 
     <!-- STATS TELEMETRY -->
     <div class="stats-grid reveal">
         <div class="telemetry">
-            <h3 data-counter="9.34">0.00</h3>
+            <h3 data-counter="9.27">0.00</h3>
             <p>CGPA · KIET</p>
         </div>
         <div class="telemetry">
-            <h3 data-counter="Top 12">Top 0</h3>
+            <h3>Top 4</h3>
             <p>National Rank</p>
         </div>
         <div class="telemetry">
-            <h3 data-counter="3+">0+</h3>
-            <p>Shipped Products</p>
+            <h3>350+</h3>
+            <p>Weekly Marketplace Visits</p>
         </div>
         <div class="telemetry">
-            <h3 data-counter="2×">0×</h3>
-            <p>National Winner</p>
+            <h3>40%</h3>
+            <p>Faster Shopify Delivery</p>
         </div>
+
+
     </div>
 
     <!-- WORK SECTION -->
@@ -2532,43 +2998,48 @@
         <div class="projects">
             <a href="https://www.linkedin.com/posts/kaustuv117_indiainnovates2026-smartcities-airquality-ugcPost-7444058280903032832-LI0W/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFA2w9kBVIegE05HK7r8U7agg2wahzCYmPs"
                 target="_blank" rel="noopener noreferrer" class="project reveal" aria-label="AirGrid OS project: Drone-integrated AQI monitoring system">
-                <div class="project-visual" style="background-image:url('./airgrid_os.jpg')">
+                <div class="project-visual" style="background:linear-gradient(145deg, #142331, #09131c 68%, #14241f)" data-project-carousel="airgrid">
                     <div class="project-overlay">
                         <div class="badge">Drone · IoT · Real-time</div>
                         <div class="project-stats">
-                            <span>Top 12 Nationally</span>
+                            <span>Top 4 Nationally</span>
                             <span>1500+ Teams</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-content">
                     <h3>AirGrid OS</h3>
-                    <p>
-                        Drone-integrated AQI monitoring system using MQ135/MQ9 sensors across altitude zones,
-                        attributing pollution sources via GPS and pollutant signature classification. Features a
-                        real-time dashboard auto-detecting CSV logs. Ranked Top 12 nationally at India Innovates 2026.
-                    </p>
-                    <div class="architecture">
-                        <div class="node">Pixhawk + MQ135/MQ9 Drone Payload</div>
-                        <div class="arrow">↓</div>
-                        <div class="node">GPS Attributed Pollutant Classification</div>
-                        <div class="arrow">↓</div>
-                        <div class="node">Real-time CSV & Live Dashboard</div>
+                    <div class="project-context"><span>Team lead</span><span class="project-dates"><span>Mar 2026</span><i class="project-date-line" aria-hidden="true"></i><span>Jul 2026</span></span></div>
+                    <p>A drone-based air-quality platform sampling three altitude zones and using GPS-tagged pollutant signatures to map likely sources. I led the team and pitched a proposed fleet model for 272 Delhi wards. The dashboard maps readings and classifies likely agricultural, vehicular, and industrial sources.</p>
+                    <div class="project-stack">Pixhawk &nbsp;&middot;&nbsp; MQ135 / MQ9 &nbsp;&middot;&nbsp; GPS &nbsp;&middot;&nbsp; Live dashboard</div>
+                    <div class="project-link">View project <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+                </div>
+            </a>
+
+            <a href="https://hack-judge-v2.vercel.app/"
+                target="_blank" rel="noopener noreferrer" class="project reveal" aria-label="HackJudge project: mobile-first hackathon judging and leaderboard platform">
+                <div class="project-visual" style="background: radial-gradient(ellipse at 70% 25%, rgba(121, 199, 255, .35), transparent 42%), linear-gradient(145deg, #101d2b, #071018 70%, #102522)" data-project-carousel="hackjudge">
+                    <div class="project-overlay">
+                        <div class="badge">Hackathon ops &middot; Mobile-first</div>
+                        <div class="project-stats">
+                            <span>BuildBreak</span>
+                            <span>Build for Bharat 2026</span>
+                        </div>
                     </div>
-                    <div class="project-link">
-                        View Project
-                        <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>HackJudge</h3>
+                    <div class="project-context"><span>Solo build</span><span class="project-dates"><span>Jan 2026</span><i class="project-date-line" aria-hidden="true"></i><span>Present</span></span></div>
+                    <p>HackJudge replaces paper scoresheets and late, manually compiled results with QR-based check-in and a mobile rubric for each team. Scores feed a live leaderboard, while sharp differences between judges are flagged for review.</p>
+                    <p>Used in real rounds with KIET’s Technocrats Club and at BuildBreak and Build for Bharat 2026, the platform supports judging panels, multi-round events, and shortlisting through an intuitive mobile-first experience.</p>
+                    <div class="project-stack">QR check-in &nbsp;&middot;&nbsp; Digital rubrics &nbsp;&middot;&nbsp; Live leaderboard</div>
+                    <div class="project-link">Try HackJudge <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
                 </div>
             </a>
 
             <a href="https://www.linkedin.com/posts/kaustuv117_two-national-finals-multiple-iit-juries-activity-7424493792566812672-j2dp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFA2w9kBVIegE05HK7r8U7agg2wahzCYmPs"
                 target="_blank" rel="noopener noreferrer" class="project reveal" aria-label="HealthChain project: Real-time patient flow orchestration and management system">
-                <div class="project-visual" style="background-image:url('./healthchain.jpg')">
+                <div class="project-visual" style="background:linear-gradient(145deg, #251a36, #111321 68%, #142a32)" data-project-carousel="healthchain">
                     <div class="project-overlay">
                         <div class="badge">SaaS · OPD Flow · HealthTech</div>
                         <div class="project-stats">
@@ -2579,32 +3050,16 @@
                 </div>
                 <div class="project-content">
                     <h3>HealthChain</h3>
-                    <p>
-                        Real-time patient flow orchestration and management system featuring HealthQueue +
-                        HealthReceipt: a dual-module platform for real-time OPD flow and digital visit records. Defined
-                        a Queue Management Algorithm capturing prescriptions to eliminate care loss.
-                    </p>
-                    <div class="architecture">
-                        <div class="node">HealthQueue Multi-Source OPD Booking</div>
-                        <div class="arrow">↓</div>
-                        <div class="node">Real-Time Queue Management Algorithm</div>
-                        <div class="arrow">↓</div>
-                        <div class="node">HealthReceipt Digital Patient Record</div>
-                    </div>
-                    <div class="project-link">
-                        View Project
-                        <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </div>
+                    <div class="project-context"><span>Solo project</span><span class="project-dates"><span>Dec 2025</span><i class="project-date-line" aria-hidden="true"></i><span>Feb 2026</span></span></div>
+                    <p>A patient-flow platform connecting OPD bookings, a custom priority queue, and digital visit records. Its follow-up workflow captures prescriptions, tests, and next steps, with a projected reduction of up to 12% in post-consultation care loss.</p>
+                    <div class="project-stack">HealthQueue &nbsp;&middot;&nbsp; Priority system &nbsp;&middot;&nbsp; HealthReceipt</div>
+                    <div class="project-link">View project <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
                 </div>
             </a>
 
             <a href="https://www.linkedin.com/posts/kaustuv117_ai-robotics-autonomousvehicles-activity-7384652452370800640-hTUt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFA2w9kBVIegE05HK7r8U7agg2wahzCYmPs"
                 target="_blank" rel="noopener noreferrer" class="project reveal" aria-label="AI Self-Driving Car project: Master-Slave dual ESP32 self-driving agent">
-                <div class="project-visual" style="background-image:url('./self_driving_car.jpg')">
+                <div class="project-visual" style="background:linear-gradient(145deg, #28302d, #101619 68%, #182638)" data-project-carousel="self-driving-car">
                     <div class="project-overlay">
                         <div class="badge">Edge AI · Robotics · Embedded</div>
                         <div class="project-stats">
@@ -2615,32 +3070,16 @@
                 </div>
                 <div class="project-content">
                     <h3>AI Self-Driving Car</h3>
-                    <p>
-                        Reflex + goal-based self-driving agent utilizing dual ESP32 Master-Slave architecture separating
-                        perception from control. Features lane detection, ultrasonic obstacle avoidance, and PID control
-                        for stable trajectory tracking on resource-constrained hardware.
-                    </p>
-                    <div class="architecture">
-                        <div class="node">Master-Slave Dual ESP32 Controller</div>
-                        <div class="arrow">↓</div>
-                        <div class="node">Perception (Camera Lane Detection + Sonar)</div>
-                        <div class="arrow">↓</div>
-                        <div class="node">PID Trajectory Tracking Loop</div>
-                    </div>
-                    <div class="project-link">
-                        View Project
-                        <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </div>
+                    <div class="project-context"><span>Team project</span><span class="project-dates"><span>Oct 2025</span><i class="project-date-line" aria-hidden="true"></i><span>Dec 2025</span></span></div>
+                    <p>A semi-autonomous dual-ESP32 agent combining camera lane detection, ultrasonic obstacle avoidance, and tuned PID tracking. Its master-slave design assigns perception and control to separate modules, each with 520 KiB RAM.</p>
+                    <div class="project-stack">Dual ESP32 &nbsp;&middot;&nbsp; Camera + sonar &nbsp;&middot;&nbsp; PID control</div>
+                    <div class="project-link">View project <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
                 </div>
             </a>
 
             <a href="https://www.linkedin.com/posts/kaustuv117_campusxchange-collegemarketplace-startup-activity-7356004302340980737-qijM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFA2w9kBVIegE05HK7r8U7agg2wahzCYmPs"
                 target="_blank" rel="noopener noreferrer" class="project reveal" aria-label="CampusXchange project: Multi-college WordPress WooCommerce student marketplace">
-                <div class="project-visual" style="background-image:url('./campusxchange.jpg')">
+                <div class="project-visual" style="background:linear-gradient(145deg, #352519, #16141a 68%, #202b32)" data-project-carousel="campusxchange">
                     <div class="project-overlay">
                         <div class="badge">Marketplace · WooCommerce · WordPress</div>
                         <div class="project-stats">
@@ -2651,26 +3090,10 @@
                 </div>
                 <div class="project-content">
                     <h3>CampusXchange</h3>
-                    <p>
-                        Hyperlocal student marketplace driving 350+ weekly visits; live at KIET Ghaziabad, United
-                        Prayagraj, and IIIT UNA. Integrated Razorpay payments and automated reservation fee systems with
-                        multi-college vendor WooCommerce architecture.
-                    </p>
-                    <div class="architecture">
-                        <div class="node">WooCommerce Multi-College Portal</div>
-                        <div class="arrow">↓</div>
-                        <div class="node">Razorpay Payment Integration</div>
-                        <div class="arrow">↓</div>
-                        <div class="node">Automated Listing Reservation Fee System</div>
-                    </div>
-                    <div class="project-link">
-                        View Project
-                        <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </div>
+                    <div class="project-context"><span>Solo project</span><span class="project-dates"><span>Jun 2025</span><i class="project-date-line" aria-hidden="true"></i><span>Jul 2026</span></span></div>
+                    <p>A multi-college marketplace where students can discover listings and reserve items. Now live across three campuses with 350+ weekly visits, it combines Razorpay payments, vendor management, and automated reservation fees.</p>
+                    <div class="project-stack">WordPress &nbsp;&middot;&nbsp; WooCommerce &nbsp;&middot;&nbsp; Razorpay</div>
+                    <div class="project-link">View project <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
                 </div>
             </a>
         </div>
@@ -2681,35 +3104,25 @@
         <div class="about-header reveal">
             <div>
                 <div class="section-tag" style="margin-bottom: 24px;">About Me</div>
-                <h2 class="about-big" id="about-heading">Crafting products people<br><em>actually feel.</em></h2>
+                <h2 class="about-big" id="about-heading">Curious by nature.<br><em>Precise by design.</em></h2>
             </div>
             <div class="about-visual"></div>
         </div>
 
         <div class="about-grid reveal">
             <div class="about-body">
-                <p>Most people optimize for shipping. I optimize for precision. Whether it's a drone gimbal accurate
-                    to 0.1°, a game atmosphere that makes your skin crawl, or a button interaction that just
-                    <em>lands</em> — the details are the product.
-                </p>
-                <p>Crafting immersive digital experiences, high-performance web applications, and custom e-commerce solutions engineered with precision, cinematic direction, and obsessive attention to detail. But more than the credentials — I build things I'd be proud to
-                    put my name on.</p>
-                <p>If you're building something ambitious and need someone who treats every detail as
-                    non-negotiable, we should talk.</p>
+                <p>I&rsquo;m a creative problem solver who enjoys moving between software and the physical world: building a marketplace used across colleges, shaping digital commerce experiences, and prototyping autonomous systems. I study Computer Science at KIET and bring ideas through to useful, real-world products.</p>
+                <p>I care about the whole experience&mdash;from a sound technical design to the small interaction that makes a product feel clear and dependable. I like working in teams, explaining ideas, and turning feedback into better iterations.</p>
+                <p><strong class="about-openness">OPEN TO OPPORTUNITIES &middot; 2027</strong><br>Internships and full-time roles in full-stack, Shopify and e-commerce, DevOps and cloud, and drone and embedded systems.</p>
             </div>
 
             <div class="about-right">
-                <div class="af"><span class="af-k">Education</span><span class="af-v">B.Tech CS · KIET Group</span>
-                </div>
-                <div class="af"><span class="af-k">CGPA</span><span class="af-v">9.34 · School Topper</span></div>
-                <div class="af"><span class="af-k">Accolades</span><span class="af-v">2× National Award Winner</span>
-                </div>
-                <div class="af"><span class="af-k">Communication</span><span class="af-v">Debate Champion · Anchored at
-                        Microsoft</span></div>
-                <div class="af"><span class="af-k">Currently</span><span class="af-v">E-Commerce Architecture · Drone AI
-                        · Cinematic UX</span></div>
-                <div class="af"><span class="af-k">Open to</span><span class="af-v">Client Projects · Internships ·
-                        Retainers</span></div>
+                <div class="af"><span class="af-k">Degree</span><span class="af-v">B.Tech Computer Science &middot; KIET</span></div>
+                <div class="af"><span class="af-k">Study</span><span class="af-v">Sep 2024&ndash;Jul 2028 &middot; 9.27 CGPA</span></div>
+                <div class="af"><span class="af-k">School</span><span class="af-v">ISC 94% &middot; CISCE 91%</span></div>
+                <div class="af"><span class="af-k">Experience</span><span class="af-v">Shopify Developer Intern &middot; Open Limits</span></div>
+                <div class="af"><span class="af-k">Leadership</span><span class="af-v">Vice President &middot; Technocrats Club, KIET</span></div>
+                <div class="af"><span class="af-k">Also</span><span class="af-v">Anchored a Microsoft India event for 200+</span></div>
             </div>
         </div>
     </section>
@@ -2724,8 +3137,7 @@
         <div class="skills-row reveal">
             <div class="sk-cat">Languages</div>
             <div class="sk-pills">
-                <span class="sk-pill">Java</span><span class="sk-pill">Python</span><span class="sk-pill">C</span><span
-                    class="sk-pill">JavaScript</span><span class="sk-pill">SQL</span>
+                <span class="sk-pill">Java</span><span class="sk-pill">JavaScript</span><span class="sk-pill">SQL</span>
             </div>
         </div>
 
@@ -2735,7 +3147,7 @@
                 <span class="sk-pill">Node.js</span><span class="sk-pill">WordPress</span><span
                     class="sk-pill">WooCommerce</span><span class="sk-pill">Shopify</span><span
                     class="sk-pill">Razorpay</span><span class="sk-pill">Git & GitHub</span><span
-                    class="sk-pill">SonarQube</span><span class="sk-pill">DevOps</span>
+                    class="sk-pill">Docker</span><span class="sk-pill">Terraform</span><span class="sk-pill">AWS</span><span class="sk-pill">GitHub Actions / CI/CD</span>
             </div>
         </div>
 
@@ -2751,17 +3163,14 @@
         <div class="skills-row reveal">
             <div class="sk-cat">Concepts & Engines</div>
             <div class="sk-pills">
-                <span class="sk-pill">AI Agents</span><span class="sk-pill">Full-Stack Development</span><span
-                    class="sk-pill">Problem Solving</span><span class="sk-pill">Unreal Engine 5</span>
+                <span class="sk-pill">Agentic AI</span><span class="sk-pill">Data Structures & Algorithms</span><span
+                    class="sk-pill">DBMS</span><span class="sk-pill">Real-Time Systems</span><span class="sk-pill">OOP & Design Patterns</span><span class="sk-pill">Unreal Engine 5</span>
             </div>
         </div>
-
         <div class="skills-row reveal">
-            <div class="sk-cat">Client Services</div>
+            <div class="sk-cat">AI-Assisted Development</div>
             <div class="sk-pills">
-                <span class="sk-pill">Custom Shopify Themes</span><span class="sk-pill">Speed & Conversion
-                    (CRO)</span><span class="sk-pill">Full-Stack Web Apps</span><span class="sk-pill">API & Payment
-                    Integrations</span><span class="sk-pill">Technical Audits</span>
+                <span class="sk-pill">GitHub Copilot</span><span class="sk-pill">OpenAI Codex</span><span class="sk-pill">Google Antigravity</span><span class="sk-pill">Review, test & validate generated code</span>
             </div>
         </div>
     </section>
@@ -2769,108 +3178,154 @@
     <!-- JOURNEY / TIMELINE -->
     <section class="tl-wrap" id="journey" aria-labelledby="experience-heading">
         <div class="reveal" style="margin-bottom:50px">
-            <div class="section-tag">Experience</div>
+            <div class="section-tag">Experience &amp; involvement</div>
             <h2 id="experience-heading" class="section-title">The <em>journey</em> so far.</h2>
         </div>
 
-        <div class="tl-item reveal">
-            <div class="tl-year">2026–Present</div>
-            <div class="tl-content">
-                <div class="tl-title">Freelance Full-Stack & Commerce Engineer</div>
-                <div class="tl-org">Independent Consulting (Global Clients)</div>
-                <div class="tl-body">Shipped custom Shopify setups, responsive WooCommerce themes, and interactive React
-                    applications for clients in Canada, and India. Focused on PageSpeed optimization, SEO
-                    visibility, and high-converting checkout flows.</div>
-                <span class="tl-tag">Contract & Freelance Work</span>
+        <div class="journey-category">
+            <h3 class="journey-category-heading">Professional</h3>
+            <div class="tl-item reveal">
+                <div class="tl-year">Feb&ndash;Apr 2026</div>
+                <div class="tl-content">
+                    <div class="tl-title">Shopify Developer Intern</div>
+                    <div class="tl-org">Open Limits &middot; Remote</div>
+                    <div class="tl-body">Planned and shipped 3+ production-ready Shopify stores. Built reusable Liquid components with Theme Editor configurability, integrated third-party APIs and Shopify apps, and used Shopify CLI and Metafields to accelerate delivery by about 40%.</div>
+                    <span class="tl-tag">Liquid &middot; Shopify CLI &middot; Metafields</span>
+                </div>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-year">Independent</div>
+                <div class="tl-content">
+                    <div class="tl-title">Independent Product Builder</div>
+                    <div class="tl-org">Client projects</div>
+                    <div class="tl-body">Builds custom digital commerce experiences, with a focus on polished storefronts, clear user journeys, and reliable delivery.</div>
+                    <span class="tl-tag">Shopify &middot; WordPress &middot; E-commerce</span>
+                </div>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-year">Jun 2025&ndash;Jul 2026</div>
+                <div class="tl-content">
+                    <div class="tl-title">CampusXchange</div>
+                    <div class="tl-org">Founder &amp; builder</div>
+                    <div class="tl-body">Built a multi-college student marketplace with listings, reservations, Razorpay payments, and vendor management. Reached 350+ weekly visits across three campuses.</div>
+                    <span class="tl-tag">WordPress &middot; WooCommerce &middot; Razorpay</span>
+                </div>
             </div>
         </div>
 
-        <div class="tl-item reveal">
-            <div class="tl-year">2026</div>
-            <div class="tl-content">
-                <div class="tl-title">Winner @ JIIT Noida & MLSA Ideathon</div>
-                <div class="tl-org">JIIT Noida & MLSA KIET</div>
-                <div class="tl-body">AIR 3 in two events at JIIT Noida. First prize winner at Bhasha Bandhu Ideathon
-                    (MLSA KIET, Microsoft, GeekRoom).</div>
-                <span class="tl-tag">Hackathon podiums</span>
+        <div class="journey-category">
+            <h3 class="journey-category-heading">Academic</h3>
+            <div class="tl-item reveal">
+                <div class="tl-year">2024&ndash;2028</div>
+                <div class="tl-content">
+                    <div class="tl-title">B.Tech, Computer Science</div>
+                    <div class="tl-org">KIET Group of Institutions</div>
+                    <div class="tl-body">Current CGPA: 9.27. Earlier academic results: 94% ISC Senior Secondary and 91% CISCE Secondary.</div>
+                    <span class="tl-tag">Computer Science &middot; 9.27 CGPA</span>
+                </div>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-year">2025&ndash;2026</div>
+                <div class="tl-content">
+                    <div class="tl-title">Certifications</div>
+                    <div class="tl-org">AWS &middot; Red Hat &middot; Infosys Springboard &middot; Microsoft Learn</div>
+                    <div class="tl-body">AWS Certified Cloud Practitioner; Red Hat Linux Fundamentals; Java OOP and ER Modeling; Microsoft Learn badges in Generative AI, Data Analytics, and Copilot in Power BI.</div>
+                    <span class="tl-tag">Cloud &middot; Linux &middot; AI &middot; Data</span>
+                </div>
             </div>
         </div>
 
-        <div class="tl-item reveal">
-            <div class="tl-year">2026–Now</div>
-            <div class="tl-content">
-                <div class="tl-title">AirGrid OS — Top 12 National (India Innovates)</div>
-                <div class="tl-org">Bharat Mandapam · GGSIPU · IIT Kharagpur</div>
-                <div class="tl-body">AirGrid OS drone intelligence platform selected Top 12 nationally out of 1500+
-                    teams. Pitched Delhi fleet operational model to a government/investor jury.</div>
-                <span class="tl-tag">Top 12 nationally</span>
+        <div class="journey-category">
+            <h3 class="journey-category-heading">Co-curricular</h3>
+            <div class="tl-item reveal">
+                <div class="tl-year">Mar&ndash;Jul 2026</div>
+                <div class="tl-content">
+                    <div class="tl-title">AirGrid OS &mdash; Top 4, India Innovates</div>
+                    <div class="tl-org">Bharat Mandapam &middot; IIT Kharagpur, NSUT &amp; GGSIPU</div>
+                    <div class="tl-body">Led a team building a drone-based air-quality platform, telemetry dashboard, and proposal for operations across Delhi&rsquo;s 272 wards. Selected Top 4 nationally from 1,500+ teams.</div>
+                    <span class="tl-tag">Team lead &middot; Top 4 nationally</span>
+                </div>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-year">Aug 2026&ndash;Present</div>
+                <div class="tl-content">
+                    <div class="tl-title">Vice President</div>
+                    <div class="tl-org">Technocrats Club, KIET</div>
+                    <div class="tl-body">Serving as Vice President, helping lead the student technology community and its events.</div>
+                    <span class="tl-tag">Student leadership</span>
+                </div>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-year">2026</div>
+                <div class="tl-content">
+                    <div class="tl-title">HackJudge</div>
+                    <div class="tl-org">Solo project &middot; Technocrats Club, KIET</div>
+                    <div class="tl-body">Built a mobile-first judging workflow with QR check-in, digital rubrics, live leaderboards, judge variance flags, multi-round panels, and shortlisting. Used at BuildBreak and Build for Bharat 2026.</div>
+                    <span class="tl-tag">Hackathon operations</span>
+                </div>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-year">Dec 2025&ndash;Feb 2026</div>
+                <div class="tl-content">
+                    <div class="tl-title">HealthChain &mdash; National B-Plan Finalist</div>
+                    <div class="tl-org">IIT Delhi &amp; IIT Kharagpur &middot; Solo project</div>
+                    <div class="tl-body">Advanced to national finals among 120 teams with a patient-flow platform spanning OPD booking, priority queuing, prescriptions, tests, and follow-ups.</div>
+                    <span class="tl-tag">National finalist</span>
+                </div>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-year">2025</div>
+                <div class="tl-content">
+                    <div class="tl-title">Smart India Hackathon &mdash; Team Lead</div>
+                    <div class="tl-org">Smart India Hackathon</div>
+                    <div class="tl-body">Led a six-member team through prototype design, execution, and presentation at the 2025 finals.</div>
+                    <span class="tl-tag">Team leadership</span>
+                </div>
             </div>
         </div>
 
-        <div class="tl-item reveal">
-            <div class="tl-year">2026–Now</div>
-            <div class="tl-content">
-                <div class="tl-title">Shopify Developer Intern</div>
-                <div class="tl-org">Open Limits (Remote / Delhi NCR)</div>
-                <div class="tl-body">Shipped 3+ production stores end-to-end (Liquid template, custom components).
-                    Accelerated store delivery time by ~40% across client projects leveraging Shopify CLI and
-                    Metafields.</div>
-                <span class="tl-tag">Liquid · Shopify CLI</span>
+        <div class="journey-category">
+            <h3 class="journey-category-heading">Extra-curricular</h3>
+            <div class="tl-item reveal">
+                <div class="tl-year">2019 &amp; 2024</div>
+                <div class="tl-content">
+                    <div class="tl-title">Two-Time National Prize Winner</div>
+                    <div class="tl-org">Prayag Sangeet Samiti</div>
+                    <div class="tl-body">Received national-level performance and arts prizes in two separate years.</div>
+                    <span class="tl-tag">National prizes</span>
+                </div>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-year">2024</div>
+                <div class="tl-content">
+                    <div class="tl-title">Event Anchor &mdash; Microsoft India</div>
+                    <div class="tl-org">Microsoft India &middot; Noida</div>
+                    <div class="tl-body">Anchored an official event for an audience of 200+.</div>
+                    <span class="tl-tag">Public speaking</span>
+                </div>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-year">2023</div>
+                <div class="tl-content">
+                    <div class="tl-title">School Vice-Captain &amp; Debate Lead</div>
+                    <div class="tl-org">Saint John&rsquo;s Academy</div>
+                    <div class="tl-body">Served as vice-captain and won debate and declamation competitions representing the school.</div>
+                    <span class="tl-tag">Leadership &middot; Debate</span>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="tl-item reveal">
-            <div class="tl-year">2026</div>
-            <div class="tl-content">
-                <div class="tl-title">HealthChain — National B-Plan Finalist</div>
-                <div class="tl-org">IIT Delhi & IIT Kharagpur</div>
-                <div class="tl-body">Advanced to national B-Plan finals. Architected OPD flow modules (HealthQueue +
-                    HealthReceipt) and defined patient flow algorithms to eliminate post-consultation care loss.</div>
-                <span class="tl-tag">B-Plan Finalist</span>
+    <!-- TEMPORARY TESTIMONIALS HOLDING SECTION -->
+    <section class="testimonials-wrap" aria-labelledby="testimonials-heading">
+        <div class="testimonials-inner">
+            <div>
+                <div class="section-tag">Testimonials</div>
+                <h2 id="testimonials-heading" class="section-title">Good work is built <em>together.</em></h2>
             </div>
-        </div>
-
-        <div class="tl-item reveal">
-            <div class="tl-year">2025</div>
-            <div class="tl-content">
-                <div class="tl-title">Smart India Hackathon — Team Lead</div>
-                <div class="tl-org">Smart India Hackathon 2025</div>
-                <div class="tl-body">Led a 6-member engineering team through prototype design, execution, and
-                    presentation for the Smart India Hackathon finals.</div>
-                <span class="tl-tag">Team Lead</span>
-            </div>
-        </div>
-
-        <div class="tl-item reveal">
-            <div class="tl-year">2024</div>
-            <div class="tl-content">
-                <div class="tl-title">Microsoft India Noida — Official Event Anchor</div>
-                <div class="tl-org">Microsoft India</div>
-                <div class="tl-body">Anchored official Microsoft corporate/community event at Noida campus with stage
-                    presence for a 1500+ audience.</div>
-                <span class="tl-tag">Public Speaking</span>
-            </div>
-        </div>
-
-        <div class="tl-item reveal">
-            <div class="tl-year">2019, 2024</div>
-            <div class="tl-content">
-                <div class="tl-title">Two-Time National Prize Winner</div>
-                <div class="tl-org">Prayag Sangeet Samiti</div>
-                <div class="tl-body">Recognized with national-level prizes in performance/arts across two separate
-                    years.</div>
-                <span class="tl-tag">National Winner</span>
-            </div>
-        </div>
-
-        <div class="tl-item reveal">
-            <div class="tl-year">2023</div>
-            <div class="tl-content">
-                <div class="tl-title">School Vice-Captain & Debate Lead</div>
-                <div class="tl-org">Saint John's Academy</div>
-                <div class="tl-body">Served as school Vice-Captain. Won multiple debates and declamation competitions
-                    representing the institution.</div>
-                <span class="tl-tag">Leadership</span>
+            <div class="testimonial-note">
+                <div class="testimonial-note-label"><span class="nav-availability-dot" aria-hidden="true"></span>Coming soon</div>
+                <p>I&rsquo;m gathering a few words from clients, teammates, and mentors. Check back soon for their perspective on working together.</p>
             </div>
         </div>
     </section>
@@ -2894,7 +3349,7 @@
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                     <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
-                Initialize Email
+                Email me
             </a>
             <a href="https://linkedin.com/in/kaustuv117" target="_blank" rel="noopener noreferrer"
                 class="btn btn-secondary btn-linkedin" aria-label="Visit Kaustuv Singh's LinkedIn profile">
@@ -2916,6 +3371,7 @@
             </a>
         </div>
     </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
@@ -2927,8 +3383,7 @@
                     Let's create<br><em style="color:var(--blue)">together.</em>
                 </h2>
                 <p style="max-width:560px;font-size:18px;line-height:1.8;color:var(--muted);margin-top:24px;">
-                    Building ambitious systems, premium products, or cinematic experiences? Let's build something
-                    unforgettable.
+                    Have a good idea? Let?s make it real.
                 </p>
             </div>
 
@@ -2955,11 +3410,6 @@
             Kaustuv Singh
         </div>
     </footer>
-
-    <!-- STICKY CTA -->
-    <div class="sticky-cta">
-        <a href="#" id="modeSwitcherBtn">See Pricing? Switch view →</a>
-    </div>
 
     <script>
         // ─── Detect mobile once ───────────────────────────────────────────────
@@ -3003,7 +3453,7 @@
         const revealObserver = new IntersectionObserver(entries => {
             const intersecting = entries.filter(e => e.isIntersecting);
             // Sort intersecting elements by their vertical offset to reveal top-to-bottom
-            intersecting.sort((a, b) => a.target.getBoundingClientRect().top - b.target.getBoundingClientRect().top);
+            intersecting.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
 
             intersecting.forEach((entry, idx) => {
                 const el = entry.target;
@@ -3018,7 +3468,244 @@
         }, { threshold: 0.05 });
         reveals.forEach(r => revealObserver.observe(r));
 
-        // ─── Theme Toggle ─────────────────────────────────────────────────────
+
+        // Project carousels use the deploy-generated image manifest.
+        const carouselCards = [...document.querySelectorAll('[data-project-carousel]')];
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const carouselObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => { entry.target.dataset.visible = entry.isIntersecting ? 'true' : 'false'; });
+        }, { threshold: 0.15 });
+        const imageManifestPromise = fetch('./assets/project-images.json')
+            .then(response => response.ok ? response.json() : Promise.reject(new Error('Image manifest unavailable')));
+
+        imageManifestPromise
+            .then(manifest => {
+                carouselCards.forEach(card => {
+                    const folder = card.dataset.projectCarousel;
+                    const images = manifest[folder] || [];
+                    if (!images.length) return;
+
+                    const stage = document.createElement('div');
+                    stage.className = 'project-carousel';
+                    stage.setAttribute('aria-hidden', 'true');
+                    const dots = document.createElement('div');
+                    dots.className = 'project-carousel-dots';
+                    dots.setAttribute('aria-hidden', 'true');
+
+                    const slides = images.map((path, index) => {
+                        const image = document.createElement('img');
+                        image.alt = '';
+                        image.decoding = 'async';
+                        image.addEventListener('load', () => {
+                            image.width = image.naturalWidth;
+                            image.height = image.naturalHeight;
+                            image.dataset.loaded = 'true';
+                        }, { once: true });
+                        image.classList.toggle('is-active', index === 0);
+                        if (index === 0) {
+                            image.loading = 'lazy';
+                            image.src = `./assets/${folder}/${encodeURIComponent(path)}`;
+                        }
+                        stage.append(image);
+
+                        const dot = document.createElement('span');
+                        dot.classList.toggle('is-active', index === 0);
+                        dots.append(dot);
+                        return { image, dot, path };
+                    });
+
+                    card.prepend(stage);
+                    if (slides.length > 1) card.append(dots);
+                    if (slides.length < 2 || reducedMotion) return;
+
+                    let current = 0;
+                    carouselObserver.observe(card);
+                    const advance = () => {
+                        if (card.dataset.visible !== 'true' || card.matches(':hover, :focus-within')) {
+                            window.setTimeout(advance, 700);
+                            return;
+                        }
+
+                        const nextIndex = (current + 1) % slides.length;
+                        const next = slides[nextIndex];
+                        const activate = () => {
+                            slides[current].image.classList.remove('is-active');
+                            slides[current].dot.classList.remove('is-active');
+                            current = nextIndex;
+                            next.image.classList.add('is-active');
+                            next.dot.classList.add('is-active');
+                            window.setTimeout(advance, 4200);
+                        };
+
+                        if (next.image.dataset.loaded === 'true') {
+                            activate();
+                        } else {
+                            next.image.addEventListener('load', () => {
+                                next.image.dataset.loaded = 'true';
+                                activate();
+                            }, { once: true });
+                            next.image.addEventListener('error', () => {
+                                next.image.dataset.loaded = 'true';
+                                window.setTimeout(advance, 1000);
+                            }, { once: true });
+                            next.image.src = `./assets/${folder}/${encodeURIComponent(next.path)}`;
+                        }
+                    };
+
+                    carouselObserver.observe(card);
+                    window.setTimeout(advance, 4200);
+                });
+            })
+            .catch(error => console.warn('Project image manifest could not be loaded.', error));
+
+
+        // Achievement slides and controls are generated from assets/achievements/ via the build manifest.
+        const achievementCarousel = document.querySelector('[data-achievement-carousel]');
+        if (achievementCarousel) {
+            const achievementStage = achievementCarousel.querySelector('.achievement-stage');
+            const achievementDotsWrap = achievementCarousel.querySelector('.achievement-pagination');
+            const achievementCount = achievementCarousel.querySelector('.achievement-count');
+            const achievementCaption = achievementCarousel.querySelector('.achievement-caption');
+            const achievementPrevious = achievementCarousel.querySelector('[data-achievement-prev]');
+            const achievementNext = achievementCarousel.querySelector('[data-achievement-next]');
+            const achievementDescriptions = {
+                'achievement-airgrid': ['AirGrid OS', 'Top 4 at India Innovates 2026'],
+                'achievement-hackjudge': ['HackJudge', 'BuildBreak + Build for Bharat 2026'],
+                'achievement-healthchain': ['HealthChain', 'National B-Plan finalist, 120 teams'],
+                'achievement-campusxchange': ['CampusXchange', '350+ weekly visits, 3 campuses'],
+                'achievement-self-driving': ['Self-driving car', 'Semi-autonomous dual-ESP32'],
+                'jiit': ['JIIT', 'Payload Delivery & Autonomous Drone Mission'],
+                'achievement-airgrid_2': ['AirGrid OS', 'The team behind a nationally ranked project'],
+                'department_of_cs_felicitation': ['Department of CS Felicitation', 'Recognition from the Computer Science department']
+            };
+            const achievementTitle = filename => {
+                const base = filename.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ').replace(/\s+/g, ' ').trim();
+                return base.replace(/\b\w/g, letter => letter.toUpperCase());
+            };
+            const loadAchievementManifest = () => imageManifestPromise
+                .then(manifest => (manifest.achievements || []).map(filename => {
+                    const key = filename.replace(/\.[^.]+$/, '').toLowerCase();
+                    const details = achievementDescriptions[key] || [achievementTitle(filename), 'Project highlight'];
+                    const slide = document.createElement('div');
+                    slide.className = 'achievement-slide';
+                    slide.dataset.caption = `${details[0]} | ${details[1]}`;
+                    slide.setAttribute('role', 'group');
+                    slide.setAttribute('aria-roledescription', 'slide');
+                    slide.setAttribute('aria-hidden', 'true');
+                    const imageWrap = document.createElement('div');
+                    imageWrap.className = 'achievement-image';
+                    const image = document.createElement('img');
+                    image.dataset.src = `./assets/achievements/${encodeURIComponent(filename)}`;
+                    image.alt = `${details[0]}: ${details[1]}`;
+                    image.decoding = 'async';
+                    image.loading = 'eager';
+                    image.addEventListener('load', () => {
+                        image.width = image.naturalWidth;
+                        image.height = image.naturalHeight;
+                    }, { once: true });
+                    imageWrap.append(image);
+                    slide.append(imageWrap);
+                    achievementStage.append(slide);
+                    return slide;
+                }))
+                .then(slides => {
+                    if (!slides.length) {
+                        achievementCarousel.hidden = true;
+                        return;
+                    }
+
+                    const achievementSlides = slides;
+                    const achievementDots = achievementSlides.map((slide, index) => {
+                        slide.setAttribute('aria-label', `${index + 1} of ${achievementSlides.length}`);
+                        const dot = document.createElement('button');
+                        dot.type = 'button';
+                        dot.dataset.achievementGo = String(index);
+                        dot.setAttribute('aria-label', `Show ${slide.dataset.caption.split(' | ')[0]} achievement`);
+                        dot.setAttribute('aria-current', 'false');
+                        achievementDotsWrap.append(dot);
+                        return dot;
+                    });
+                    let activeAchievement = 0;
+                    let carouselIsVisible = false;
+                    let autoplayTimer = null;
+                    const reducedMotionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+                    const stopAutoplay = () => {
+                        window.clearTimeout(autoplayTimer);
+                        autoplayTimer = null;
+                    };
+
+                    const showAchievement = index => {
+                        activeAchievement = (index + achievementSlides.length) % achievementSlides.length;
+                        const previousAchievement = (activeAchievement + achievementSlides.length - 1) % achievementSlides.length;
+                        const nextAchievement = (activeAchievement + 1) % achievementSlides.length;
+                        achievementSlides.forEach((slide, slideIndex) => {
+                            const active = slideIndex === activeAchievement;
+                            const previous = slideIndex === previousAchievement;
+                            const next = slideIndex === nextAchievement;
+                            slide.classList.toggle('is-active', active);
+                            slide.classList.toggle('is-prev', previous && slideIndex !== activeAchievement);
+                            slide.classList.toggle('is-next', next && slideIndex !== activeAchievement);
+                            slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+                            if (!active && !previous && !next) return;
+                            const image = slide.querySelector('img[data-src]');
+                            if (image && !image.hasAttribute('src')) image.src = image.dataset.src;
+                        });
+                        achievementCaption.textContent = achievementSlides[activeAchievement].dataset.caption.replace(' | ', ' \u00b7 ');
+                        achievementDots.forEach((dot, dotIndex) => dot.setAttribute('aria-current', dotIndex === activeAchievement ? 'true' : 'false'));
+                        achievementCount.textContent = `${String(activeAchievement + 1).padStart(2, '0')} / ${String(achievementSlides.length).padStart(2, '0')}`;
+                    };
+
+                    const scheduleAutoplay = () => {
+                        stopAutoplay();
+                        if (reducedMotionPreference.matches || !carouselIsVisible || achievementSlides.length < 2) return;
+                        autoplayTimer = window.setTimeout(() => {
+                            if (document.visibilityState !== 'visible' || achievementCarousel.matches(':hover')) {
+                                scheduleAutoplay();
+                                return;
+                            }
+                            showAchievement(activeAchievement + 1);
+                            scheduleAutoplay();
+                        }, 2000);
+                    };
+                    const moveTo = index => {
+                        showAchievement(index);
+                        scheduleAutoplay();
+                    };
+
+                    achievementPrevious.addEventListener('click', event => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        moveTo(activeAchievement - 1);
+                    });
+                    achievementNext.addEventListener('click', event => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        moveTo(activeAchievement + 1);
+                    });
+                    achievementDots.forEach(dot => dot.addEventListener('click', () => moveTo(Number(dot.dataset.achievementGo))));
+                    showAchievement(0);
+                    const achievementObserver = new IntersectionObserver(entries => {
+                        carouselIsVisible = entries.some(entry => entry.isIntersecting);
+                        if (carouselIsVisible) scheduleAutoplay();
+                        else stopAutoplay();
+                    }, { threshold: 0.2 });
+                    achievementObserver.observe(achievementCarousel);
+                    document.addEventListener('visibilitychange', () => {
+                        if (document.visibilityState === 'visible') scheduleAutoplay();
+                        else stopAutoplay();
+                    });
+                    reducedMotionPreference.addEventListener('change', scheduleAutoplay);
+                    scheduleAutoplay();
+                })
+                .catch(error => {
+                    console.warn('Achievement image manifest could not be loaded.', error);
+                    achievementCarousel.hidden = true;
+                });
+
+            loadAchievementManifest();
+        }
+
         const themeToggle = document.getElementById('themeToggle');
         if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.remove('light');
@@ -3198,12 +3885,7 @@
             }
         }, { passive: true });
 
-        /* ─── MODE SWITCHER ─────────────────────────────────────── */
-        document.getElementById('modeSwitcherBtn').addEventListener('click', (e) => {
-            e.preventDefault();
-            localStorage.setItem('portfolioMode', 'client');
-            window.location.replace('client.html');
-        });
+
     </script>
     <script type="application/ld+json">
     {
@@ -3214,11 +3896,12 @@
           "@id": "https://kaustuvsingh.vercel.app/#person",
           "name": "Kaustuv Singh",
           "url": "https://kaustuvsingh.vercel.app/",
+          "description": "Kaustuv Singh is a creative thinker and problem solver who builds and ships useful products with care, across software, commerce, cloud, and autonomous systems.",
           "sameAs": [
             "https://github.com/thekaustuvofficial",
             "https://linkedin.com/in/kaustuv117"
           ],
-          "jobTitle": "Full-Stack Developer & Software Engineer",
+          "jobTitle": "Creative Thinker, Product Builder & Computer Science Undergraduate",
           "knowsAbout": [
             "Full-Stack Development",
             "Shopify Development",
@@ -3229,7 +3912,11 @@
             "IoT",
             "React",
             "Java",
-            "Python"
+            "AWS",
+            "Docker",
+            "Terraform",
+            "Agentic AI",
+            "Real-Time Systems"
           ],
           "alumniOf": {
             "@type": "EducationalOrganization",
@@ -3251,19 +3938,6 @@
           "url": "https://kaustuvsingh.vercel.app/",
           "mainEntity": {
             "@id": "https://kaustuvsingh.vercel.app/#person"
-          }
-        },
-        {
-          "@type": "ProfessionalService",
-          "@id": "https://kaustuvsingh.vercel.app/#service",
-          "name": "Kaustuv Singh Freelance Development Services",
-          "url": "https://kaustuvsingh.vercel.app/",
-          "image": "https://kaustuvsingh.vercel.app/og-image.jpg",
-          "priceRange": "$$",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Delhi NCR",
-            "addressCountry": "IN"
           }
         }
       ]

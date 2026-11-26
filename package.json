@@ -1,0 +1,10 @@
+{
+  "name": "kaustuv-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generate-project-image-manifest.mjs",
+    "optimize:images": "powershell -NoProfile -Command \"python scripts/optimize_images.py\"",
+    "social:cards": "powershell -NoProfile -Command \"python scripts/generate_social_cards.py\""
+  }
+}
